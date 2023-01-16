@@ -78,7 +78,7 @@ Question -- {question}
 image_template = """
 ### Relevant Image
 
-![{caption}](images/{image})
+![image](images/{image})
 
 *Figure*: {caption}
 """

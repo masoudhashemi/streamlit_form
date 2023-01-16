@@ -6,7 +6,7 @@ if os.path.exists("report.md"):
         lines = f.readlines()
     markdown_lines = []
     for i, line in enumerate(lines):
-        if "![" in line:
+        if "![image]" in line:
             markdown = "".join(markdown_lines)
             st.markdown(markdown)
             image_path = line.split("(")[1].split(")")[0]

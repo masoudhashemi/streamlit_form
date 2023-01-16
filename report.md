@@ -17,7 +17,7 @@ Question -- Which type of cuisine do you prefer?
 
 ### Relevant Image
 
-![nan](images/Dr._Perceptron.jpg)
+![image](images/Dr._Perceptron.jpg)
 
 *Figure*: nan
 
@@ -38,7 +38,7 @@ Question -- Which type of cuisine do you prefer?
 
 ### Relevant Image
 
-![nan](images/wallpaperflare.com_wallpaper.jpg)
+![image](images/wallpaperflare.com_wallpaper.jpg)
 
 *Figure*: nan
 
