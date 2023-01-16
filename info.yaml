@@ -1,0 +1,28 @@
+title: "Survey on Food Preferences"
+
+entry_1:
+  question: "Which type of cuisine do you prefer?"
+  options:
+    - A: "Mexican"
+    - B: "Italian"
+    - C: "Chinese"
+  description: "Please select the type of cuisine you prefer the most"
+  sub_questions:
+    - question: "How often do you eat Mexican food?"
+      help: "Please select the frequency of how often you eat Mexican food."
+    - question: "How spicy do you like your Italian food?"
+      help: "Please select the level of spiciness you prefer for your Italian food."
+
+entry_2:
+  question: "What is your favorite type of meat?"
+  options:
+    - A: "Chicken"
+    - B: "Beef"
+    - C: "Pork"
+    - D: "Seafood"
+  description: "Please select your favorite type of meat"
+  sub_questions:
+    - question: "Do you prefer your meat cooked a certain way?"
+      help: "Please specify your preferred cooking method for your favorite type of meat."
+    - question: "Do you have any dietary restrictions related to meat?"
+      help: "Please specify any dietary restrictions related to meat."
