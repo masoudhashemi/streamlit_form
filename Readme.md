@@ -9,5 +9,5 @@ You can generate an markdown report from the form.
 Run the app with:
 
 ```bash
-streamlit run app_yaml.py
+streamlit run Main_Page.py
 ```
