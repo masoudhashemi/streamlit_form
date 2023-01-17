@@ -9,17 +9,17 @@ Question -- Which type of cuisine do you prefer?
     Answer -- B: Italian
 
 ### Detailed Questions: 
-- How often do you eat Mexican food?: N/A 
+- How often do you eat Mexican food?: Rarely 
  
-- How spicy do you like your Italian food?: N/A 
+- How spicy do you like your Italian food?: I do not like spicy food 
  
 
 
 ### Relevant Image
 
-![image](images/Dr._Perceptron.jpg)
+![image](reports_first_report/images/Dr._Perceptron.jpg)
 
-*Figure*: nan
+*Figure*: example image
 
 ----------------
 
@@ -27,19 +27,19 @@ Question -- Which type of cuisine do you prefer?
 
 Question -- Which type of cuisine do you prefer?
 
-    Answer -- C: Pork
+    Answer -- B: Beef
 
 ### Detailed Questions: 
-- How often do you eat Mexican food?: N/A 
+- How often do you eat Mexican food?: nope 
  
-- How spicy do you like your Italian food?: N/A 
+- How spicy do you like your Italian food?: nope 
  
 
 
 ### Relevant Image
 
-![image](images/wallpaperflare.com_wallpaper.jpg)
+![image](reports_first_report/images/151424.jpg)
 
-*Figure*: nan
+*Figure*: some image although irrelevant
 
 ----------------
