@@ -136,7 +136,7 @@ images_name = []
 captions = []
 
 # Set the page layout to wide
-st.set_page_config(layout="wide", page_title="R&D Report Generator", page_icon="🧊")
+st.set_page_config(layout="wide", page_title="R&O Report Generator", page_icon="🧊")
 
 # Add a page to the sidebar
 page = st.sidebar.selectbox("Select a page", ["Form", "CSV Content"])
