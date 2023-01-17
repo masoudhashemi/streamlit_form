@@ -3,18 +3,21 @@ import os
 import streamlit as st
 
 # Set the page layout to wide
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="R&D Report Reader", page_icon="🧊")
 
 col1, col2, _ = st.columns(3)
 
 with col1:
     folder_name = st.selectbox(
-        "Select a folder", [folder[8:].replace("_", " ") for folder in os.listdir() if folder.startswith("reports_")]
+        "Select a folder",
+        [folder[8:].replace("_", " ") for folder in os.listdir("reports/") if folder.startswith("reports_")],
     )
 if folder_name:
     folder_name = "reports_" + folder_name.replace(" ", "_")
 
-if folder_name in os.listdir():
+
+if folder_name in os.listdir("reports/"):
+    folder_name = f"reports/{folder_name}"
     if os.path.exists(f"{folder_name}/report.md"):
         with open(f"{folder_name}/report.md", "r") as f:
             lines = f.readlines()

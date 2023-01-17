@@ -9,9 +9,9 @@ Question -- Which type of cuisine do you prefer?
     Answer -- C: Chinese
 
 ### Detailed Questions: 
-- How often do you eat Mexican food?: Sometimes 
+- How often do you eat Mexican food?: N/A 
  
-- How spicy do you like your Italian food?: I like it 
+- How spicy do you like your Italian food?: N/A 
  
 
 

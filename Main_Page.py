@@ -119,14 +119,14 @@ def md_report(df, checkboxes_textboxes, report, template, image_template, folder
 
 def create_folder(folder_name):
     folder_name = "reports_" + folder_name.replace(" ", "_")
-    if not os.path.exists(folder_name):
-        os.makedirs(folder_name)
+    if not os.path.exists(f"reports/{folder_name}"):
+        os.makedirs(f"reports/{folder_name}")
     return folder_name
 
 
 def delete_folder(folder_name):
-    if os.path.exists(folder_name):
-        shutil.rmtree(folder_name)
+    if os.path.exists(f"reports/{folder_name}"):
+        shutil.rmtree(f"reports/{folder_name}")
 
 
 text_inputs = []
@@ -136,7 +136,7 @@ images_name = []
 captions = []
 
 # Set the page layout to wide
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="R&D Report Generator", page_icon="🧊")
 
 # Add a page to the sidebar
 page = st.sidebar.selectbox("Select a page", ["Form", "CSV Content"])
@@ -147,7 +147,8 @@ col1, col2, col3 = st.columns(3)
 with col1:
     folder_name = st.selectbox(
         "Select a folder or create a new one",
-        [folder[8:].replace("_", " ") for folder in os.listdir() if folder.startswith("reports_")] + ["Create a new folder"],
+        [folder[8:].replace("_", " ") for folder in os.listdir("reports/") if folder.startswith("reports_")]
+        + ["Create a new folder"],
     )
 
 if folder_name == "Create a new folder":
@@ -159,8 +160,8 @@ else:
     folder_name = "reports_" + folder_name.replace(" ", "_")
 
 with col2:
-    st.write("") # empty row
-    st.write("") # empty row
+    st.write("")  # empty row
+    st.write("")  # empty row
     if st.button("Delete folder"):
         delete_folder(folder_name)
         folder_name = ""
@@ -169,6 +170,8 @@ with col2:
 
 
 st.markdown(f"##### Folder: {folder_name}")
+
+folder_name = f"reports/{folder_name}"
 
 # Show the form page
 if folder_name != "":
