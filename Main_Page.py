@@ -137,30 +137,35 @@ captions = []
 
 # Set the page layout to wide
 st.set_page_config(layout="wide")
+
 # Add a page to the sidebar
 page = st.sidebar.selectbox("Select a page", ["Form", "CSV Content"])
 
 st.markdown(f"# {title}")
 
-
-folder_name = st.selectbox(
-    "Select a folder or create a new one",
-    [folder[8:].replace("_", " ") for folder in os.listdir() if folder.startswith("reports_")] + ["Create a new folder"],
-)
+col1, col2, col3 = st.columns(3)
+with col1:
+    folder_name = st.selectbox(
+        "Select a folder or create a new one",
+        [folder[8:].replace("_", " ") for folder in os.listdir() if folder.startswith("reports_")] + ["Create a new folder"],
+    )
 
 if folder_name == "Create a new folder":
-    folder_name = st.text_input("Enter the name of the new folder")
+    with col1:
+        folder_name = st.text_input("Enter the name of the new folder")
     if folder_name != "":
         folder_name = create_folder(folder_name)
 else:
     folder_name = "reports_" + folder_name.replace(" ", "_")
 
-
-if st.button("Delete folder"):
-    delete_folder(folder_name)
-    folder_name = ""
-    st.write(folder_name)
-    st.success("Folder deleted")
+with col2:
+    st.write("") # empty row
+    st.write("") # empty row
+    if st.button("Delete folder"):
+        delete_folder(folder_name)
+        folder_name = ""
+        st.write(folder_name)
+        st.success("Folder deleted")
 
 
 st.markdown(f"##### Folder: {folder_name}")

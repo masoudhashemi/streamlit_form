@@ -2,9 +2,15 @@ import os
 
 import streamlit as st
 
-folder_name = st.selectbox(
-    "Select a folder", [folder[8:].replace("_", " ") for folder in os.listdir() if folder.startswith("reports_")]
-)
+# Set the page layout to wide
+st.set_page_config(layout="wide")
+
+col1, col2, _ = st.columns(3)
+
+with col1:
+    folder_name = st.selectbox(
+        "Select a folder", [folder[8:].replace("_", " ") for folder in os.listdir() if folder.startswith("reports_")]
+    )
 if folder_name:
     folder_name = "reports_" + folder_name.replace(" ", "_")
 
