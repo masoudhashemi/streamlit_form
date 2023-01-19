@@ -23,16 +23,16 @@ Question -- Which type of cuisine do you prefer?
 
 ----------------
 
-## Description: Please select the type of cuisine you prefer the most
+## Description: Please select your favorite type of meat
 
-Question -- Which type of cuisine do you prefer?
+Question -- What is your favorite type of meat?
 
     Answer -- B: Beef
 
 ### Detailed Questions: 
-- How often do you eat Mexican food?: nope 
+- Do you prefer your meat cooked a certain way?: nope 
  
-- How spicy do you like your Italian food?: nope 
+- Do you have any dietary restrictions related to meat?: nope 
  
 
 
