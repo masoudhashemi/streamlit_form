@@ -93,7 +93,7 @@ report = """
 
 def md_report(df, checkboxes_textboxes, report, template, image_template, folder_name):
     # Iterate over the rows of the DataFrame
-    for i, row in df.iterrows():
+    for i, (_, row) in enumerate(df.iterrows()):
         # Format the template with the values from the DataFrame
         if pd.isna(row["Image"]):
             image_template_text = ""
